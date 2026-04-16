@@ -1,0 +1,18 @@
+# Secrets
+.env
+*.env
+.env.*
+!.env.example
+
+# Local config
+*.local
+
+# Common artifacts
+node_modules/
+dist/
+coverage/
+.cache/
+*.log
+*.tmp
+*.bak
+*~

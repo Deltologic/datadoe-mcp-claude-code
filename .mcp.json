@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "datadoe": {
+      "type": "http",
+      "url": "https://api.datadoe.com/mcp/v1?",
+      "headers": {
+        "datadoe-mcp-key": "${DATADOE_MCP_KEY}"
+      }
+    }
+  }
+}
