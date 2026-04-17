@@ -8,8 +8,9 @@ This repository is a starter template for integrating DataDoe MCP with Claude Co
 - [Prerequisites](#prerequisites)
 - [Get DataDoe Subscription and MCP Key](#get-datadoe-subscription-and-mcp-key)
 - [Configure DataDoe MCP in Claude Code CLI](#configure-datadoe-mcp-in-claude-code-cli)
+- [Run Claude Code from Dedicated Launcher](#run-claude-code-from-dedicated-launcher)
 - [Claude Settings (Official Model)](#claude-settings-official-model)
-- [Optional `.mcp.json` Structure](#optional-mcpjson-structure)
+- [DataDoe MCP Configuration Options](#datadoe-mcp-configuration-options)
 - [Validation Checklist](#validation-checklist)
 - [How to get help](#how-to-get-help)
 - [Recommended repository cleanup](#recommended-repository-cleanup)
@@ -58,10 +59,10 @@ claude --version
 
 ## Configure DataDoe MCP in Claude Code CLI
 
-Run this exact command:
+Add DataDoe MCP with CLI command:
 
 ```bash
-claude mcp add --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY" datadoe "https://api.datadoe.com/mcp/v1?"
+claude mcp add datadoe https://api.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
 ```
 
 What this does:
@@ -71,6 +72,38 @@ What this does:
 - keeps setup consistent for all collaborators
 
 Reference: [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
+
+## Run Claude Code from Dedicated Launcher
+
+This repository includes a dedicated launcher script:
+
+```bash
+./scripts/start-claude.sh
+```
+
+The launcher loads `.env`, exports `DATADOE_MCP_KEY` into the current process, and then starts Claude Code CLI from the repository root.
+
+Short manual:
+
+```bash
+# Interactive menu (recommended)
+./scripts/start-claude.sh
+
+# Direct launch Claude Code CLI
+./scripts/start-claude.sh --cli
+
+# Validate env loading + Claude CLI availability only
+./scripts/start-claude.sh --check
+
+# Help
+./scripts/start-claude.sh --help
+```
+
+If needed, make it executable once:
+
+```bash
+chmod +x ./scripts/start-claude.sh
+```
 
 ## Claude Settings (Official Model)
 
@@ -102,16 +135,18 @@ Example shared project settings (`.claude/settings.json`) with schema and basic 
 }
 ```
 
-## Optional `.mcp.json` Structure
+## DataDoe MCP Configuration Options
 
-You can keep this repo-managed structure (already provided in this repo):
+You can configure DataDoe MCP in either of these ways.
+
+Option A: repository-managed `.mcp.json` (recommended for teams):
 
 ```json
 {
   "mcpServers": {
     "datadoe": {
       "type": "http",
-      "url": "https://api.datadoe.com/mcp/v1?",
+      "url": "https://api.datadoe.com/mcp/v1",
       "headers": {
         "datadoe-mcp-key": "${DATADOE_MCP_KEY}"
       }
@@ -119,6 +154,14 @@ You can keep this repo-managed structure (already provided in this repo):
   }
 }
 ```
+
+Option B: add by CLI command (writes/updates `.mcp.json`):
+
+```bash
+claude mcp add datadoe https://api.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
+```
+
+If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this variable set before starting Claude Code (the launcher does this automatically by loading `.env`).
 
 > [!CAUTION]
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
