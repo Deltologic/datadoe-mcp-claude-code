@@ -85,8 +85,7 @@ Reference: [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING]
-> `scripts/start-claude.sh` is the protected launcher for this repository.
+> [!WARNING] > `scripts/start-claude.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
@@ -204,6 +203,6 @@ If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this varia
 ## How to get help
 
 - Email: [contact@datadoe.com](mailto:contact@datadoe.com)
-- Claude Code MCP Setup [docs](https://code.claude.com/docs/en/mcp)
-- Claude Code Docs [docs](https://code.claude.com/docs/en/overview)
-- Claude Code CLI reference [cli-reference](https://code.claude.com/docs/en/cli-reference)
+- Claude Code MCP Setup: [docs](https://code.claude.com/docs/en/mcp)
+- Claude Code Docs: [docs](https://code.claude.com/docs/en/overview)
+- Claude Code CLI reference: [cli-reference](https://code.claude.com/docs/en/cli-reference)
