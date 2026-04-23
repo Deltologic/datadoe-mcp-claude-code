@@ -85,7 +85,8 @@ Reference: [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING] > `scripts/start-claude.sh` is the protected launcher for this repository.
+> [!WARNING]
+> `scripts/start-claude.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
