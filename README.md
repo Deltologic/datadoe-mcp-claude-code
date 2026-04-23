@@ -4,17 +4,25 @@ This repository is a starter template for integrating DataDoe MCP with Claude Co
 
 ## Table of Contents
 
+- [What you can do with this repo](#what-you-can-do-with-this-repo)
 - [What This Repo Includes](#what-this-repo-includes)
 - [Prerequisites](#prerequisites)
 - [Get DataDoe Subscription and MCP Key](#get-datadoe-subscription-and-mcp-key)
 - [Configure DataDoe MCP in Claude Code CLI](#configure-datadoe-mcp-in-claude-code-cli)
 - [Run Claude Code from Dedicated Launcher](#run-claude-code-from-dedicated-launcher)
 - [Claude Settings (Official Model)](#claude-settings-official-model)
+- [Example prompt library starter pack](#example-prompt-library-starter-pack)
 - [DataDoe MCP Configuration Options](#datadoe-mcp-configuration-options)
 - [Validation Checklist](#validation-checklist)
 - [How to get help](#how-to-get-help)
 - [Recommended repository cleanup](#recommended-repository-cleanup)
 - [Tags](#tags)
+
+## What you can do with this repo
+
+- Connect Claude Code CLI to DataDoe MCP in a secure way.
+- Ask Amazon seller questions using DataDoe-backed data.
+- Reuse this setup as a template for new Amazon-focused assistant projects.
 
 ## What This Repo Includes
 
@@ -134,6 +142,19 @@ Example shared project settings (`.claude/settings.json`) with schema and basic 
   }
 }
 ```
+
+## Example prompt library starter pack
+
+To help you start faster with an AI Agent + DataDoe MCP workflow, this repo includes a small prompt library at:
+
+- `.claude/prompts/EXAMPLES.md`
+
+Use it as a starter pack:
+
+1. Open `.claude/prompts/EXAMPLES.md`.
+2. Copy a prompt block and adjust placeholders (for example `{{seller_name}}`) to your account context.
+3. Run the prompt in Claude Code CLI chat with DataDoe MCP enabled.
+4. Save your own high-performing prompts in the same file to build a reusable internal playbook.
 
 ## DataDoe MCP Configuration Options
 
