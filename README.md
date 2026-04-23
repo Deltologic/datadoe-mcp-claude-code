@@ -1,13 +1,13 @@
 # DataDoe MCP + Claude Code CLI Template
 
-This repository is a starter template for integrating DataDoe MCP with Claude Code CLI in a secure, team-friendly way.
+This repository is a minimal example of using the DataDoe MCP server from Claude Code CLI for Amazon-focused workflows.
 
 ## Table of Contents
 
 - [What you can do with this repo](#what-you-can-do-with-this-repo)
 - [What This Repo Includes](#what-this-repo-includes)
 - [Prerequisites](#prerequisites)
-- [Get DataDoe Subscription and MCP Key](#get-datadoe-subscription-and-mcp-key)
+- [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [Configure DataDoe MCP in Claude Code CLI](#configure-datadoe-mcp-in-claude-code-cli)
 - [Run Claude Code from Dedicated Launcher](#run-claude-code-from-dedicated-launcher)
 - [Claude Settings (Official Model)](#claude-settings-official-model)
@@ -54,16 +54,16 @@ which claude
 claude --version
 ```
 
-## Get DataDoe Subscription and MCP Key
+## How to get a DataDoe subscription and get MCP Key
 
-1. Go to [app.datadoe.com](https://app.datadoe.com)
-2. Create account
-3. Purchase subscription
-4. Accept Terms and Conditions and Privacy Policy
-5. Go to `Integrations`
-6. Click `MCP` tile (`/integrations/mcp`)
-7. Click `MCP Key`, add name + expiration, click `Create`
-8. Copy key and store in a secure secret manager
+1. Go to [app.datadoe.com](https://app.datadoe.com).
+2. Create an account.
+3. Purchase a subscription.
+4. Accept the Terms and Conditions and Privacy Policy.
+5. Go to the `Integrations` module.
+6. Click the `MCP` tile (this navigates to `/integrations/mcp`).
+7. Click `MCP Key`, then add a name and expiration date, and click `Create`.
+8. Copy the key and store it in a secure secret manager or another safe location.
 
 ## Configure DataDoe MCP in Claude Code CLI
 
@@ -85,8 +85,7 @@ Reference: [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING]
-> `scripts/start-claude.sh` is the protected launcher for this repository.
+> [!WARNING] > `scripts/start-claude.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
@@ -204,17 +203,6 @@ If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this varia
 ## How to get help
 
 - Email: [contact@datadoe.com](mailto:contact@datadoe.com)
-
-## Recommended repository cleanup
-
-For each repository using this template, keep settings lean:
-
-- Disable GitHub Wiki if not used.
-- Disable GitHub Projects if not used.
-- Disable Discussions if not used.
-- Keep branch protection minimal but enabled for your main branch.
-- Do not commit `.env` or real API keys.
-
-## Tags
-
-`DataDoe` `MCP` `Anthropic` `Claude Code` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting` `E-Commerce` `Online Marketplaces`
+- Claude Code MCP Setup [docs](https://code.claude.com/docs/en/mcp)
+- Claude Code Docs [docs](https://code.claude.com/docs/en/overview)
+- Claude Code CLI reference [cli-reference](https://code.claude.com/docs/en/cli-reference)

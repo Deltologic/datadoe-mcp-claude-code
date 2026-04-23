@@ -71,7 +71,7 @@ Prepare list of orders for {{seller_name}} seller for last month which order sta
 Use when: You want to create or visualize a clean and modern dashboard for a specific Amazon seller (e.g., for reporting, analysis, executive review, or performance monitoring) with mock or real data.
 
 ```text
-Make a `/canvas` to build a modern, responsive Dashboard for a {{seller_name}} seller.
+Make a modern, responsive Dashboard for a {{seller_name}} seller.
 
 **Tech Stack & Context:**
 - Use ReactJS and Tailwind CSS for styling.
