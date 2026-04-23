@@ -204,6 +204,6 @@ If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this varia
 ## How to get help
 
 - Email: [contact@datadoe.com](mailto:contact@datadoe.com)
-- Claude Code MCP Setup [docs](https://code.claude.com/docs/en/mcp)
-- Claude Code Docs [docs](https://code.claude.com/docs/en/overview)
-- Claude Code CLI reference [cli-reference](https://code.claude.com/docs/en/cli-reference)
+- Claude Code MCP Setup: [docs](https://code.claude.com/docs/en/mcp)
+- Claude Code Docs: [docs](https://code.claude.com/docs/en/overview)
+- Claude Code CLI reference: [cli-reference](https://code.claude.com/docs/en/cli-reference)
