@@ -13,10 +13,7 @@ This repository is a minimal example of using the DataDoe MCP server from Claude
 - [Claude Settings (Official Model)](#claude-settings-official-model)
 - [Example prompt library starter pack](#example-prompt-library-starter-pack)
 - [DataDoe MCP Configuration Options](#datadoe-mcp-configuration-options)
-- [Validation Checklist](#validation-checklist)
 - [How to get help](#how-to-get-help)
-- [Recommended repository cleanup](#recommended-repository-cleanup)
-- [Tags](#tags)
 
 ## What you can do with this repo
 
@@ -28,7 +25,7 @@ This repository is a minimal example of using the DataDoe MCP server from Claude
 
 - Claude Code MCP setup guidance for a project-scoped `datadoe` server
 - secure secret handling with `.env` and `.env.example`
-- repository-specific assistant rules in `.claude/CLAUDE.md`
+- repository-specific assistant rules in `CLAUDE.md`
 - validation checks to confirm integration is working
 
 ## Prerequisites
@@ -85,8 +82,7 @@ Reference: [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING]
-> `scripts/start-claude.sh` is the protected launcher for this repository.
+> [!WARNING] > `scripts/start-claude.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
@@ -124,7 +120,7 @@ Per the [Claude settings docs](https://code.claude.com/docs/en/settings), Claude
 - **User scope**: `~/.claude/settings.json` (your personal defaults across all repos)
 - **Project scope**: `.claude/settings.json` (shared with this repository team)
 - **Local scope**: `.claude/settings.local.json` (personal overrides for this repo, not shared)
-- **Project memory/instructions**: `.claude/CLAUDE.md` (team-shared assistant guidance)
+- **Project memory/instructions**: `CLAUDE.md` (team-shared assistant guidance)
 - **Project MCP servers**: `.mcp.json` (team-shared MCP server definitions)
 
 Precedence (high to low): managed settings, CLI args, local project settings, shared project settings, user settings.
@@ -192,14 +188,6 @@ If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this varia
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
 > Never commit real keys to git.
 > If a key is exposed, rotate it immediately.
-
-## Validation Checklist
-
-- `.env` is ignored by Git.
-- `.env.example` is tracked by Git.
-- `.claude/CLAUDE.md` exists.
-- `claude mcp list` shows `datadoe`.
-- `/mcp` inside Claude Code CLI shows the server as available.
 
 ## How to get help
 
