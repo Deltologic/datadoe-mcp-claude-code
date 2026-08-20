@@ -67,7 +67,7 @@ claude --version
 Add DataDoe MCP with CLI command:
 
 ```bash
-claude mcp add datadoe https://api.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
+claude mcp add datadoe https://mcp.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
 ```
 
 What this does:
@@ -167,7 +167,7 @@ Option A: repository-managed `.mcp.json` (recommended for teams):
   "mcpServers": {
     "datadoe": {
       "type": "http",
-      "url": "https://api.datadoe.com/mcp/v1",
+      "url": "https://mcp.datadoe.com/mcp/v1",
       "headers": {
         "datadoe-mcp-key": "${DATADOE_MCP_KEY}"
       }
@@ -179,7 +179,7 @@ Option A: repository-managed `.mcp.json` (recommended for teams):
 Option B: add by CLI command (writes/updates `.mcp.json`):
 
 ```bash
-claude mcp add datadoe https://api.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
+claude mcp add datadoe https://mcp.datadoe.com/mcp/v1 --transport http --scope project --header "datadoe-mcp-key: YOUR_API_KEY"
 ```
 
 If you use `${DATADOE_MCP_KEY}` in `.mcp.json`, ensure your shell has this variable set before starting Claude Code (the launcher does this automatically by loading `.env`).
