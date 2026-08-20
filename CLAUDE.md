@@ -20,5 +20,7 @@
 
 ## DataDoe MCP Documentation
 
-- Detailed usage guidance is available in `datadoe_mcp.md`.
-- Source URL: https://api.datadoe.com/api/v1/spec/datadoe_mcp.md
+- The DataDoe MCP server sends its usage instructions with the connection, so they are available as soon as the session starts.
+- For more detail, call `datadoe_user_docs_table_of_contents_get` to list the documentation pages, then `datadoe_user_docs_page_get` to read one.
+- Human-readable docs: https://www.datadoe.com/hub/docs
+- REST API specification: https://api.datadoe.com/api/v1/spec/datadoe_api.md
